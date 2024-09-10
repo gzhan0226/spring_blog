@@ -1,0 +1,26 @@
+spring: #띄어쓰기 없음
+  datasource: #띄어쓰기 2칸
+    url: jdbc:h2:tcp://localhost/~/blog #4칸
+    username: sa
+    password: 123
+    driver-class-name: org.h2.Driver
+  jpa: #띄어쓰기 2칸
+    hibernate: #띄어쓰기 4칸
+      ddl-auto: create #띄어쓰기 6칸 !!!none or create
+    properties: #띄어쓰기 4칸
+      hibernate: #띄어쓰기 6칸
+        #전송 쿼리확인
+        show_sql: true   #띄어쓰기 8칸
+        format_sql: true  #띄어쓰기 8칸
+    # 테이블 생성 후 에 data.sql 실행
+    defer-datasource-initialization: true #-> 추가s
+  #    open-in-view: false # OSIV OFF
+  sql:
+    init:
+      mode: always  #-> 추가
+jwt:
+  issuer: gzhan@naver.com
+  secret_key: study-springboot
+logging.level: #띄어쓰기 없음
+  org.hibernate.SQL: debug #띄어쓰기 2칸
+  org.hibernate.orm.jdbc.bind: trace #파라미터에 머가 들어갈지 로그에 찍어줌
